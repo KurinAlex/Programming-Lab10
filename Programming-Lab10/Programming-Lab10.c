@@ -17,34 +17,34 @@ void OutputSquareEquationRoots(double a, double b, double c, const char* variabl
 		{
 			if (c == 0.0)
 			{
-				printf("has infinity roots");
+				printf("has infinite number of roots\n");
 			}
 			else
 			{
-				printf("don't have roots");
+				printf("doesn't have roots\n");
 			}
 		}
 		else
 		{
-			printf("has one root: %lf", -c / b);
+			printf("has one root: %lf\n", -c / b);
 		}
 	}
 	else
 	{
-		double D = b * b - 4 * a * c;
+		double D = b * b - 4.0 * a * c;
 
 		if (D < 0.0)
 		{
-			printf("don`t have real roots\n");
+			printf("doesn't have real roots\n");
 		}
 		else if (D == 0.0)
 		{
-			printf("has one root: %lf\n", -b / (2 * a));
+			printf("has one root: %lf\n", -b / (2.0 * a));
 		}
 		else
 		{
 			double sqrt_D = sqrt(D);
-			printf("has two roots: %lf and %lf\n", (-b + sqrt_D) / (2 * a), (-b - sqrt_D) / (2 * a));
+			printf("has two roots: %lf and %lf\n", (-b + sqrt_D) / (2.0 * a), (-b - sqrt_D) / (2.0 * a));
 		}
 	}
 }
@@ -66,7 +66,7 @@ int main()
 	double f;
 	EnterDouble(&f, "f");
 
-	OutputSquareEquationRoots(1, -a, b, "x");
+	OutputSquareEquationRoots(1.0, -a, b, "x");
 	OutputSquareEquationRoots(c, -d, -f, "y");
 
 	getch();
